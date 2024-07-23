@@ -2,6 +2,9 @@ import os
 import subprocess
 import shutil
 
+
+
+
 def calculate_bitrate(target_size_mb, duration_seconds):
     # Convert target size from MB to bits
     target_size_bits = target_size_mb * 8 * 1024 * 1024
@@ -47,6 +50,6 @@ def compress_videos_in_folder(folder_path, target_size_mb):
             output_path = os.path.join(folder_path, f"compressed_{filename}")
             compress_video(input_path, output_path, target_size_mb)
          
-folder_path = r"C:\Users\mohdn\OneDrive\Desktop\compressed_videos"
+folder_path = r"FILE PATH" # FILE PATH to compressed_videos folder
 target_size_mb = 25  # Target size in megabytes
 compress_videos_in_folder(folder_path, target_size_mb)
